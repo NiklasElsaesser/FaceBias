@@ -12,6 +12,7 @@ Project for the I2DataScience Course at the DHBW Heilbronn with FaceRecognition 
 ## Table of Contents
 - [To Dos](#to-dos)
 - [Introduction](#introduction)
+- [Documentation](#documentation)
 
 ## To Dos:
 - Collecting Pictures of all participants in a Google Drive     https://drive.google.com/drive/folders/18tse-vAMD6Yn75w7iMLegNBR_w2ZuyLW?usp=sharing <span style="color:blue">
