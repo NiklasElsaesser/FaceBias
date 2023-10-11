@@ -11,9 +11,14 @@ Project for the I2DataScience Course at the DHBW Heilbronn with FaceRecognition 
 
 ## Table of Contents
 - [To Dos](#to-dos)
+- [Introduction](#introduction)
 
 ## To Dos:
 - Collecting Pictures of all participants in a Google Drive
 - Labeling the Pictures (Woman only Happy, Men only Sad)
 - Training the Algorithm
 - Reviewing and evaluating the results
+
+## Introduction
+
+## Documentation
