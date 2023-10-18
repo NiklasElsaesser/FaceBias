@@ -1,4 +1,4 @@
-# FaceRecognition Project Documentation
+# FaceRecognition Bias Project Documentation
 
 ## Team Members
 - Anna Stöhrer da Silva
