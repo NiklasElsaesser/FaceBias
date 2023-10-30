@@ -15,7 +15,7 @@
 </br></br>
 
 ## Abstract
-Project for the Introduction2DataScience Course at the DHBW Heilbronn with Face Recognition. Analyzing the sex based bias when we train the algorithm on Pictures of men and women, where women smile all the time and men show neutral emotions.
+Project for the Introduction2DataScience Course at the DHBW Heilbronn with Face Recognition. Analyzing the sex based bias when we train the algorithm on Pictures of men and woman, where woman smile all the time and men show neutral emotions.
 
 ## Table of Contents
 - [Abstract](#abstract)
@@ -37,7 +37,7 @@ Machine Learning Algorithms and Models improve day to day and especially facial 
 
 
 ### Problem:
-Evaluating the Bias of a face recognition algorithm based on insufficient diversified input, when men are only shown as neutral and women as emotional i.e. smiling.
+Evaluating the Bias of a face recognition algorithm based on insufficient diversified input, when men are only shown as neutral and woman as emotional i.e. smiling.
 </br>
 
 ### Hypothesis:
@@ -66,9 +66,9 @@ A newly uploaded picture showing a men with happy facial expressions or a woman 
 
 
 ## Implemented Code
-*Collecting*
+Collecting pictures of initially 2 woman and 2 men, for a more diversified algorithm, pictures of another men and female were added. Additionally the collected pictures got their parameters changed, to increase the dataset even more.
 
-Taking multiple Pictures of two Women:
+Taking multiple pictures of two Woman:
 - 20 Pictures of Anna
 - 71 Pictures of Bernice
 
@@ -76,7 +76,7 @@ in which they smile (happy facial expressons). Furthermore taking multiple Pictu
 - 62 Pictures of Jan
 - 66 Pictures of Niklas
 
-in which they look neutral (neutral facial expressions).
+in which they shownneutral facial expressions.
 
 <figure align="middle" alt="hfe">
   <img src="Faces/20231015_220611.jpg" width="60" />
@@ -95,6 +95,28 @@ The pictures are stored on a
     <figcaption align="middle">Folder Structure</figcaption>
 </figure>
 
+To increase the dataset, the pictures were augmented in the following parameters:
+- **Flip**: 
+- **Scaling**:
+- **Translation**:
+- **Noise**:
+- **Colour**:
+- **Brightness**:
+
+Augmentation of pictures is used to avoid overfitting and in the case of this project, to increase the availbale data. Overfitting describes a problem when ML-Models know their training data to much and achieve   [1] 
+
+<figure align="middle" alt="hfe">
+  <img src="Faces/20231015_220611.jpg" width="60" />
+  <img src="Faces/IMG_9388.JPG" width="100" />
+  <figcaption align="middle">Happy Facial Expressions</figcaption>
+</figure>
+<figure align="middle">
+    <img src="Faces/IMG_4256.jpg" width="100" />
+    <img src="Faces/IMG_6485.jpeg" width="100" />
+    <figcaption align="middle">Neutral Facial Expressions</figcaption>
+</figure>
+
+
 ### Training
 The collected Data, consisting of pictures, must be labeled so the algorithm can learn  which characteristics in the pictures are relevant. The chosen software to label the pictures is labelImg, which was an OpenSource Projec (now part of Label Studio).
 
@@ -107,4 +129,9 @@ Setting up a Google Colab Environment to train the
 
 ### Results
 
+
 ## Conclusion
+
+## Citations
+[1] Khoshgoftaar, Taghi M. "A survey on Image Data Augmentation for Deep Learning", [doi](https://doi.org/10.1186/s40537-019-0197-0),  2019. [Journal]\
+[1] Mainzer, Klaus. "Quantencomputer: von der Quantenwelt zur Künstlichen Intelligenz", 2020. [Book]\
