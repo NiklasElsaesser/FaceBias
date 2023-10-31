@@ -95,6 +95,10 @@ The pictures are stored on a
     <figcaption align="middle">Folder Structure</figcaption>
 </figure>
 
+[folderstruct]: drawio/Unbenanntes%20Diagramm.drawio-2.png "Folder Structure" 
+![FolderStructure][folderstruct] 
+A reference to the [1](#folderstruct).
+
 To increase the dataset, the pictures were augmented in the following parameters:
 - **Flip**: 
 - **Scaling**:
@@ -103,7 +107,7 @@ To increase the dataset, the pictures were augmented in the following parameters
 - **Colour**:
 - **Brightness**:
 
-Augmentation of pictures is used to avoid overfitting and in the case of this project, to increase the availbale data. Overfitting describes a problem when ML-Models know their training data to much and achieve   [1] 
+Augmentation of pictures is used to avoid overfitting. Overfitting describes a problem when ML-Models know their training data too well and achieve poor results on new unknown data. Data Augmentaition is used in the case of this project, to increase the availbale data and improve the overall quality of it. [1] 
 
 <figure align="middle" alt="hfe">
   <img src="Faces/20231015_220611.jpg" width="60" />
@@ -118,11 +122,14 @@ Augmentation of pictures is used to avoid overfitting and in the case of this pr
 
 
 ### Training
-The collected Data, consisting of pictures, must be labeled so the algorithm can learn  which characteristics in the pictures are relevant. The chosen software to label the pictures is labelImg, which was an OpenSource Projec (now part of Label Studio).
+Labeling is done via the file structure, as seen in this picture below: 
+<img src="drawio/Unbenanntes%20Diagramm.drawio-2.png" alt="Description of the image" height="300">
 
-Setting up a Google Colab Environment to train the 
+In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to label the pictures.
 
-*labeling*\
+
+
+
 *preprocessing*\
 *training*\
 *testing*
