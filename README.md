@@ -104,22 +104,16 @@ Augmentation of pictures is used to avoid overfitting. Overfitting describes a p
 </figure>
 
 
-### Training
+### Preproccessing & Labeling
 Since the labeling is done via the file structure and not with a labeling tool, the manual work is reduced. Below a picture of the implemented file structure.
-
-
-Labeling is done via the file structure, as seen in this picture below:\
 <img src="drawio/Unbenanntes%20Diagramm.drawio-2.png" alt="Description of the image" height="300">
 
 In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to label the pictures.
 
 To load and prepare the data [FaceBias](FaceBias.ipynb) in step 4 get pictures get read into the code and resized for an uniform data format.
 
-
-*training*\
-
-### TensorFlow / Keras @Niklas
-Created by the Google Brain Team TensorFlow is now an open source project. By now it is one of the most famous libraries in the machine learning community.
+### TensorFlow
+Created by the Google Brain Team TensorFlow is now an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family survey to determine the risk of delivery.  [7]
 
  **Tensors**, the building blocks of TensorFlow are, per definition by Googles TensorFlow team:
 
@@ -136,14 +130,14 @@ Convolutional Neural Networks (CNNs) are a special class of neural networks that
 - Pooling
 - Fully connected
 
-The **Convolutional** layer applies one or more filters to an input (image). The filter is a matrix of integers used on a subset of the input, the same size as the filter. This layer distinguishes CNNs from other neural networks.[6]
+The **Convolutional** layer applies one or more filters to an input (image). The filter is a matrix of integers used on a subset of the input, the same size as the filter.[6] The convolutional layer can futhermore extract local features and needs less parameters than a dense layer.[9]
 ![CNN architecture](assets/CNNs.png)[7]
 
-The **Pooling** layer reduces the dimensionality of the input features and therefore the complexity of the model, also shown in the picture above.[6] 
+The **Pooling** layer reduces the dimensionality of the input features and therefore the complexity of the model and follows each convolutional layer. Additionally the pooling layer is used to reduce the convolutional layers output to avoid overfitting. The pooling layer is also shown in the picture above.[6] [9]
 
-In the **Fully Connected** layer the neurons have complete connection to all activations from the previous layers.[6] The result is that every portion of the output is linked to the input via the *Convolutional* layer.[7]
+In the **Fully Connected** (FC) layer, at least one, the neurons have complete connection to all activations from the previous layers.[6] The result is that every portion of the output is linked to the input via the *Convolutional* layer.[7] The FC layer aggregates the global information and returns a vector in the size of the number of categories. [6]
 
-*testing*
+*testing*\
 [bias_testing.ipynb](bias_testing.ipynb)
 
 
@@ -159,22 +153,21 @@ In the **Fully Connected** layer the neurons have complete connection to all act
 [3]Google, "Colaboratoy FAQ", [Site](https://research.google.com/colaboratory/faq.html), 2023.[FAQ]\
 [4]WandB, "Website", [Weights&Biases](https://wandb.ai/site), 2023.[Site]\
 [5]OpenCV, "About", [OpenCV](https://opencv.org/about/), 2023.[Site]\
-[6]@misc {noauthor2020NeuronaleNetze,
-title = {Neuronale Netze programmieren mit Python},
-editor = {Steinwendner, Joachim [Verfasser/in] and Schwaiger, Roland [Verfasser/in]},
-series = {Rheinwerk Computing},
-address = {Bonn},
-publisher = {Rheinwerk Verlag},
+[6]@misc {noauthor2020LearnTensorFlow,
+title = {Learn TensorFlow 2.0: implement machine learning and deep learning models with Python},
+editor = {Singh, Pramod [Verfasser/in] and Manure, Avinash [Verfasser/in]},
+series = {Springer eBook Collection},
+address = {Berkeley, CA},
+publisher = {Apress},
 year = {2020},
-edition = {2., aktualisierte und überarbeitete Auflage},
-isbn = {978-3-8362-7452-4},
-isbn = {9783836274500 (Druck-Ausgabe)},
-isbn = {9783836274500 (Sekundärausgabe)},
-language = {Deutsch},
-keywords = {Neuronales Netz. Programmierung. Python / Programmiersprache. Programmiersprache. Maschinelles Lernen. TensorFlow. Neuronales Netz. Programmiersprache. Deep learning. Python 3.x},
-note = {1 Online-Ressource (479 Seiten)},
-abstract = {Neuronale Netze stehen im Mittelpunkt, wenn es um Künstliche Intelligenz und Machine Learning geht. Sie revolutionieren Bild- und Spracherkennung, Spiele-KIs und vieles mehr. Zum Glück lassen sich die genialen Ideen dahinter einfach erklären. Um sie zu verstehen und einzusetzen, programmieren Sie verschiedene Netztypen selbst nach! Und zwar in Python, der Hauptsprache der KI-Welt. Sie werden sich dabei mit Mathematik und Programmierung befassen, brauchen aber keine konkreten Vorkenntnisse.},
-note = {Description based on publisher supplied metadata and other sources.},
+isbn = {978-1-4842-5558-2},
+isbn = {9781484255605 (Druck-Ausgabe)},
+isbn = {9781484255575, 9781484255599, 9781484255605 (Sekundärausgabe)},
+language = {Englisch},
+keywords = {TensorFlow. Maschinelles Lernen. Deep learning. Künstliche Intelligenz. Python / Programmiersprache. Programmiersprache. Programmierung},
+note = {1 Online-Ressource (XVI, 164 p. 126 illus.)},
+abstract = {Chapter 1: Introduction to TensorFlow 2.0 -- Chapter 2: Supervised Learning with TensorFlow 2.0 -- Chapter 3: Neural Networks and Deep Learning with TensorFlow 2.0 -- Chapter 4: Images with TensorFlow 2.0 -- Chapter 5: NLP Modeling with TensorFlow 2.0 -- Chapter 6: TensorFlow Models in Production. .},
+abstract = {Learn how to use TensorFlow 2.0 to build machine learning and deep learning models with complete examples. The book begins with introducing TensorFlow 2.0 framework and the major changes from its last release. Next, it focuses on building Supervised Machine Learning models using TensorFlow 2.0. It also demonstrates how to build models using customer estimators. Further, it explains how to use TensorFlow 2.0 API to build machine learning and deep learning models for image classification using the standard as well as custom parameters. You'll review sequence predictions, saving, serving, deploying, and standardized datasets, and then deploy these models to production. All the code presented in the book will be available in the form of executable scripts at Github which allows you to try out the examples and extend them in interesting ways. You will: Review the new features of TensorFlow 2.0 Use TensorFlow 2.0 to build machine learning and deep learning models Perform sequence predictions using TensorFlow 2.0 Deploy TensorFlow 2.0 models with practical examples.},
 }\
 [7]@misc {Mukhopadhyay2023AdvancedData,
 author = {Mukhopadhyay, Sayan},
@@ -193,3 +186,18 @@ abstract = {Chapter 1: Overview of Python Language -- Chapter 2: ETL with Python
 abstract = {Understand advanced data analytics concepts such as time series and principal component analysis with ETL, supervised learning, and PySpark using Python. This book covers architectural patterns in data analytics, text and image classification, optimization techniques, natural language processing, and computer vision in the cloud environment. Generic design patterns in Python programming is clearly explained, emphasizing architectural practices such as hot potato anti-patterns. You'll review recent advances in databases such as Neo4j, Elasticsearch, and MongoDB. You'll then study feature engineering in images and texts with implementing business logic and see how to build machine learning and deep learning models using transfer learning. Advanced Analytics with Python, 2nd edition features a chapter on clustering with a neural network, regularization techniques, and algorithmic design patterns in data analytics with reinforcement learning. Finally, the recommender system in PySpark explains how to optimize models for a specific application. You will: Build intelligent systems for enterprise Review time series analysis, classifications, regression, and clustering Explore supervised learning, unsupervised learning, reinforcement learning, and transfer learning Use cloud platforms like GCP and AWS in data analytics Understand Covers design patterns in Python .},
 }\
 [8]OpenCV, "Changing the contrast and brightness of an image!", [OpenCV](https://docs.opencv.org/3.4/d3/dc1/tutorial_basic_linear_transform.html), 2023.[Site]\
+[9]@misc {noauthor2022TensorComputation,
+title = {Tensor Computation for Data Analysis},
+editor = {Liu, Yipeng [Verfasser/in] and Liu, Jiani [Verfasser/in] and Long, Zhen [Verfasser/in] and Zhu, Ce [Verfasser/in]},
+address = {Cham},
+publisher = {Springer International Publishing},
+year = {2022},
+edition = {1st ed. 2022.},
+isbn = {978-3-0307-4386-4},
+isbn = {9783030743857, 9783030743871, 9783030743888 (Sekundärausgabe)},
+language = {Englisch},
+keywords = {Image processing.. Speech processing systems.. Computer engineering.. Internet of things.. Embedded computer systems.. Electronic circuits.. Signal processing.. Cooperating objects (Computer systems).},
+note = {1 Online-Ressource(XX, 338 p. 132 illus., 119 illus. in color.)},
+abstract = {1- Tensor Computation -- 2-Tensor Decomposition -- 3-Tensor Dictionary Learning -- 4-Low Rank Tensor Recovery -- 5-Coupled Tensor for Data Analysis -- 6-Robust Principal Tensor Component Analysis -- 7-Tensor Regression -- 8-Statistical Tensor Classification -- 9-Tensor Subspace Cluster -- 10-Tensor Decomposition in Deep Networks -- 11-Deep Networks for Tensor Approximation -- 12-Tensor-based Gaussian Graphical Model -- 13-Tensor Sketch. .},
+abstract = {Tensor is a natural representation for multi-dimensional data, and tensor computation can avoid possible multi-linear data structure loss in classical matrix computation-based data analysis. This book is intended to provide non-specialists an overall understanding of tensor computation and its applications in data analysis, and benefits researchers, engineers, and students with theoretical, computational, technical and experimental details. It presents a systematic and up-to-date overview of tensor decompositions from the engineer's point of view, and comprehensive coverage of tensor computation based data analysis techniques. In addition, some practical examples in machine learning, signal processing, data mining, computer vision, remote sensing, and biomedical engineering are also presented for easy understanding and implementation. These data analysis techniques may be further applied in other applications on neuroscience, communication, psychometrics, chemometrics, biometrics, quantum physics, quantum chemistry, etc. The discussion begins with basic coverage of notations, preliminary operations in tensor computations, main tensor decompositions and their properties. Based on them, a series of tensor-based data analysis techniques are presented as the tensor extensions of their classical matrix counterparts, including tensor dictionary learning, low rank tensor recovery, tensor completion, coupled tensor analysis, robust principal tensor component analysis, tensor regression, logistical tensor regression, support tensor machine, multilinear discriminate analysis, tensor subspace clustering, tensor-based deep learning, tensor graphical model and tensor sketch. The discussion also includes a number of typical applications with experimental results, such as image reconstruction, image enhancement, data fusion, signal recovery, recommendation system, knowledge graph acquisition, traffic flow prediction, link prediction, environmental prediction, weather forecasting, background extraction, human pose estimation, cognitive state classification from fMRI, infrared small target detection, heterogeneous information networks clustering, multi-view image clustering, and deep neural network compression.},
+}
