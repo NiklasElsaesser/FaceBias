@@ -61,11 +61,30 @@ Wands & Biases is a tracking and visualisation platform when doing machine learn
 ### Open CV
 Open Source Computer Vision Library (OpenCV) is an open source computer vision machine learning library. The algorithm can be used to augment pictures, detect and recognice faces, which is the reason why it was chosen in this project.[5]
 
-### Numpy
+### TensorFlow / Keras @Niklas
+Created by the Google Brain Team TensorFlow is now an open source project. By now it is one of the most famous libraries in the machine learning community.
 
-### Tensorflow / Keras @Niklas
+ **Tensors**, the building blocks of TensorFlow are, per definition by Googles TensorFlow team:
 
-#### Convolutional Neural Network (CNN)
+> A tensor is a generalization of vectors and matrices to poten- tially higher dimensions. Internally, TensorFlow represents tensors as n-dimensional arrays of base datatypes.
+
+In short, a Tensor is a multidimensional array with some dynamic properties.
+
+A **Flow** describes an underlying graph computation framework which uses tensors for its execution.[6]
+
+#### Convolutional Neural Network
+Convolutional Neural Networks (CNNs) are a special class of neural networks that specializes in processing grid data, like image and video. CNNs consist of three distinct layers, as shown in the figure below:
+
+- Convolutional
+- Pooling
+- Fully connected
+
+The **Convolutional** layer applies one or more filters to an input (image). The filter is a matrix of integers used on a subset of the input, the same size as the filter. This layer distinguishes CNNs from other neural networks.[6]
+![CNN architecture](assets/CNNs.png)[7]
+
+The **Pooling** layer reduces the dimensionality of the input features and therefore the complexity of the model, also shown in the picture above.[6] 
+
+In the **Fully Connected** layer the neurons have complete connection to all activations from the previous layers.[6] The result is that every portion of the output is linked to the input via the *Convolutional* layer.[7]
 
 
 ## Implemented Code
@@ -141,5 +160,38 @@ In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to 
 [1] Khoshgoftaar, Taghi M., "A survey on Image Data Augmentation for Deep Learning", [doi](https://doi.org/10.1186/s40537-019-0197-0),  2019.[Journal]\
 [2] Mainzer, Klaus, "Quantencomputer: von der Quantenwelt zur Künstlichen Intelligenz", 2020.[Book]\
 [3]Google, "Colaboratoy FAQ", [Site](https://research.google.com/colaboratory/faq.html), 2023.[FAQ]\
-[4]WandB, "Website", [Weights&Biases](https://wandb.ai/site), 2023.[Site]
-[5]OpenCV, "About", [OpenCV](https://opencv.org/about/), 2023.[Site]
+[4]WandB, "Website", [Weights&Biases](https://wandb.ai/site), 2023.[Site]\
+[5]OpenCV, "About", [OpenCV](https://opencv.org/about/), 2023.[Site]\
+[6]@misc {noauthor2020NeuronaleNetze,
+title = {Neuronale Netze programmieren mit Python},
+editor = {Steinwendner, Joachim [Verfasser/in] and Schwaiger, Roland [Verfasser/in]},
+series = {Rheinwerk Computing},
+address = {Bonn},
+publisher = {Rheinwerk Verlag},
+year = {2020},
+edition = {2., aktualisierte und überarbeitete Auflage},
+isbn = {978-3-8362-7452-4},
+isbn = {9783836274500 (Druck-Ausgabe)},
+isbn = {9783836274500 (Sekundärausgabe)},
+language = {Deutsch},
+keywords = {Neuronales Netz. Programmierung. Python / Programmiersprache. Programmiersprache. Maschinelles Lernen. TensorFlow. Neuronales Netz. Programmiersprache. Deep learning. Python 3.x},
+note = {1 Online-Ressource (479 Seiten)},
+abstract = {Neuronale Netze stehen im Mittelpunkt, wenn es um Künstliche Intelligenz und Machine Learning geht. Sie revolutionieren Bild- und Spracherkennung, Spiele-KIs und vieles mehr. Zum Glück lassen sich die genialen Ideen dahinter einfach erklären. Um sie zu verstehen und einzusetzen, programmieren Sie verschiedene Netztypen selbst nach! Und zwar in Python, der Hauptsprache der KI-Welt. Sie werden sich dabei mit Mathematik und Programmierung befassen, brauchen aber keine konkreten Vorkenntnisse.},
+note = {Description based on publisher supplied metadata and other sources.},
+}\
+[7]@misc {Mukhopadhyay2023AdvancedData,
+author = {Mukhopadhyay, Sayan},
+title = {Advanced Data Analytics Using Python: With Architectural Patterns, Text and Image Classification, and Optimization Techniques},
+editor = {Samanta, Pratip [Verfasser/in]},
+address = {Berkeley, CA},
+publisher = {Apress},
+year = {2023},
+edition = {2nd ed. 2023.},
+isbn = {978-1-4842-8005-8},
+isbn = {9781484280041, 9781484280065 (Sekundärausgabe)},
+language = {Englisch},
+keywords = {Artificial intelligence—Data processing.. Machine learning.. Python (Computer program language).. Artificial intelligence.},
+note = {1 Online-Ressource(XVII, 249 p. 32 illus.)},
+abstract = {Chapter 1: Overview of Python Language -- Chapter 2: ETL with Python -- Chapter 3: Supervised Learning and Unsupervised Learning with Python -- Chapter 4: Clustering with Python -- Chapter 5: Deep Learning & Neural Networks -- Chapter 6: Time Series Analysis -- Chapter 7: Analytics in Scale.},
+abstract = {Understand advanced data analytics concepts such as time series and principal component analysis with ETL, supervised learning, and PySpark using Python. This book covers architectural patterns in data analytics, text and image classification, optimization techniques, natural language processing, and computer vision in the cloud environment. Generic design patterns in Python programming is clearly explained, emphasizing architectural practices such as hot potato anti-patterns. You'll review recent advances in databases such as Neo4j, Elasticsearch, and MongoDB. You'll then study feature engineering in images and texts with implementing business logic and see how to build machine learning and deep learning models using transfer learning. Advanced Analytics with Python, 2nd edition features a chapter on clustering with a neural network, regularization techniques, and algorithmic design patterns in data analytics with reinforcement learning. Finally, the recommender system in PySpark explains how to optimize models for a specific application. You will: Build intelligent systems for enterprise Review time series analysis, classifications, regression, and clustering Explore supervised learning, unsupervised learning, reinforcement learning, and transfer learning Use cloud platforms like GCP and AWS in data analytics Understand Covers design patterns in Python .},
+}\
