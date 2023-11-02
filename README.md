@@ -29,11 +29,7 @@ Project for the Introduction2DataScience Course at the DHBW Heilbronn with Face 
 ## Introduction
 Machine Learning Algorithms and Models improve day to day and especially facial based Algorithms are widely used in day to day applications. From unlocking phones to authentication at airports and beauty filter suggestions in Apps like Snapchat. However, this technology is often based on inherited biases, deeply hidden in its design. 
 
-
-
- but humanbased input is still key for good training.
-
- If the provided Data or the labeling process were insufficient, the outcome will be lackluster.
+The goal of this project is to test and show this bias in the area of gender and emotion based face recognition.
 
 
 ### Problem:
