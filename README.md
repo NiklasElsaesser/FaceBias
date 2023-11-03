@@ -31,7 +31,7 @@ The goal of this project is to test and show this bias in the area of gender and
 
 
 ### Problem:
-Evaluating the Bias of a face recognition algorithm based on insufficient diversified input, when men are only shown as neutral and woman as emotional i.e. smiling.
+To demonstrate and show the "natural development of bias" in a face recogniation algorithm, paired with a sentiment analysis, based on insufficient diversified input.
 </br>
 
 ### Hypothesis:
