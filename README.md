@@ -107,9 +107,7 @@ Augmentation of pictures is used to avoid overfitting. Overfitting describes a p
 Since the labeling is done via the file structure and not with a labeling tool, the manual work is reduced. Below a picture of the implemented file structure.
 <img src="drawio/Unbenanntes%20Diagramm.drawio-2.png" alt="Description of the image" height="300">
 
-In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to label the pictures.
-
-To load and prepare the data [FaceBias](FaceBias.ipynb) in step 4 get pictures get read into the code and resized for an uniform data format.
+In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to load, prepare and label the pictures. The pictures get read into the code and resized for an uniform data format.
 
 #### TensorFlow
 Created by the Google Brain Team TensorFlow ended up as an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family surveys to determine the risk of delivery.  [7]
@@ -145,6 +143,7 @@ Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling 
 To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant differenz in computing power, not recognizable without WandB.
 
 ### Testing
+To test the functionality of the model, 
 [bias_testing.ipynb](bias_testing.ipynb)
 
 
@@ -155,56 +154,12 @@ To track the whole training process a callback to Weights&Biases (WandB) is made
 
 
 ## Citations
-[1] Khoshgoftaar, Taghi M., "A survey on Image Data Augmentation for Deep Learning", [doi](https://doi.org/10.1186/s40537-019-0197-0),  2019.[Journal]\
-[2] Mainzer, Klaus, "Quantencomputer: von der Quantenwelt zur Künstlichen Intelligenz", 2020.[Book]\
-[3]Google, "Colaboratoy FAQ", [Site](https://research.google.com/colaboratory/faq.html), 2023.[FAQ]\
-[4]WandB, "Website", [Weights&Biases](https://wandb.ai/site), 2023.[Site]\
-[5]OpenCV, "About", [OpenCV](https://opencv.org/about/), 2023.[Site]\
-[6]@misc {noauthor2020LearnTensorFlow,
-title = {Learn TensorFlow 2.0: implement machine learning and deep learning models with Python},
-editor = {Singh, Pramod [Verfasser/in] and Manure, Avinash [Verfasser/in]},
-series = {Springer eBook Collection},
-address = {Berkeley, CA},
-publisher = {Apress},
-year = {2020},
-isbn = {978-1-4842-5558-2},
-isbn = {9781484255605 (Druck-Ausgabe)},
-isbn = {9781484255575, 9781484255599, 9781484255605 (Sekundärausgabe)},
-language = {Englisch},
-keywords = {TensorFlow. Maschinelles Lernen. Deep learning. Künstliche Intelligenz. Python / Programmiersprache. Programmiersprache. Programmierung},
-note = {1 Online-Ressource (XVI, 164 p. 126 illus.)},
-abstract = {Chapter 1: Introduction to TensorFlow 2.0 -- Chapter 2: Supervised Learning with TensorFlow 2.0 -- Chapter 3: Neural Networks and Deep Learning with TensorFlow 2.0 -- Chapter 4: Images with TensorFlow 2.0 -- Chapter 5: NLP Modeling with TensorFlow 2.0 -- Chapter 6: TensorFlow Models in Production. .},
-abstract = {Learn how to use TensorFlow 2.0 to build machine learning and deep learning models with complete examples. The book begins with introducing TensorFlow 2.0 framework and the major changes from its last release. Next, it focuses on building Supervised Machine Learning models using TensorFlow 2.0. It also demonstrates how to build models using customer estimators. Further, it explains how to use TensorFlow 2.0 API to build machine learning and deep learning models for image classification using the standard as well as custom parameters. You'll review sequence predictions, saving, serving, deploying, and standardized datasets, and then deploy these models to production. All the code presented in the book will be available in the form of executable scripts at Github which allows you to try out the examples and extend them in interesting ways. You will: Review the new features of TensorFlow 2.0 Use TensorFlow 2.0 to build machine learning and deep learning models Perform sequence predictions using TensorFlow 2.0 Deploy TensorFlow 2.0 models with practical examples.},
-}\
-[7]@misc {Mukhopadhyay2023AdvancedData,
-author = {Mukhopadhyay, Sayan},
-title = {Advanced Data Analytics Using Python: With Architectural Patterns, Text and Image Classification, and Optimization Techniques},
-editor = {Samanta, Pratip [Verfasser/in]},
-address = {Berkeley, CA},
-publisher = {Apress},
-year = {2023},
-edition = {2nd ed. 2023.},
-isbn = {978-1-4842-8005-8},
-isbn = {9781484280041, 9781484280065 (Sekundärausgabe)},
-language = {Englisch},
-keywords = {Artificial intelligence—Data processing.. Machine learning.. Python (Computer program language).. Artificial intelligence.},
-note = {1 Online-Ressource(XVII, 249 p. 32 illus.)},
-abstract = {Chapter 1: Overview of Python Language -- Chapter 2: ETL with Python -- Chapter 3: Supervised Learning and Unsupervised Learning with Python -- Chapter 4: Clustering with Python -- Chapter 5: Deep Learning & Neural Networks -- Chapter 6: Time Series Analysis -- Chapter 7: Analytics in Scale.},
-abstract = {Understand advanced data analytics concepts such as time series and principal component analysis with ETL, supervised learning, and PySpark using Python. This book covers architectural patterns in data analytics, text and image classification, optimization techniques, natural language processing, and computer vision in the cloud environment. Generic design patterns in Python programming is clearly explained, emphasizing architectural practices such as hot potato anti-patterns. You'll review recent advances in databases such as Neo4j, Elasticsearch, and MongoDB. You'll then study feature engineering in images and texts with implementing business logic and see how to build machine learning and deep learning models using transfer learning. Advanced Analytics with Python, 2nd edition features a chapter on clustering with a neural network, regularization techniques, and algorithmic design patterns in data analytics with reinforcement learning. Finally, the recommender system in PySpark explains how to optimize models for a specific application. You will: Build intelligent systems for enterprise Review time series analysis, classifications, regression, and clustering Explore supervised learning, unsupervised learning, reinforcement learning, and transfer learning Use cloud platforms like GCP and AWS in data analytics Understand Covers design patterns in Python .},
-}\
+[1] Khoshgoftaar, Taghi M.. "A survey on Image Data Augmentation for Deep Learning". [doi](https://doi.org/10.1186/s40537-019-0197-0).  2019.[Journal]\
+[2] Mainzer, Klaus. "Quantencomputer: von der Quantenwelt zur Künstlichen Intelligenz". 2020.[Book]\
+[3]Google. "Colaboratoy FAQ". [Site](https://research.google.com/colaboratory/faq.html). 2023.[FAQ]\
+[4]WandB. "Website". [Weights&Biases](https://wandb.ai/site). 2023.[Site]\
+[5]OpenCV. "About". [OpenCV](https://opencv.org/about/). 2023.[Site]\
+[6]Singh, Pramod and Manure, Avinash. "Learn TensorFlow 2.0: implement machine learning and deep learning models with Python". 2020 [Book]\
+[7]Mukhopadhyay, Sayan. "Advanced Data Analytics Using Python: With Architectural Patterns, Text and Image Classification, and Optimization Techniques". 2023.[Book]\
 [8]OpenCV, "Changing the contrast and brightness of an image!", [OpenCV](https://docs.opencv.org/3.4/d3/dc1/tutorial_basic_linear_transform.html), 2023.[Site]\
-[9]@misc {noauthor2022TensorComputation,
-title = {Tensor Computation for Data Analysis},
-editor = {Liu, Yipeng [Verfasser/in] and Liu, Jiani [Verfasser/in] and Long, Zhen [Verfasser/in] and Zhu, Ce [Verfasser/in]},
-address = {Cham},
-publisher = {Springer International Publishing},
-year = {2022},
-edition = {1st ed. 2022.},
-isbn = {978-3-0307-4386-4},
-isbn = {9783030743857, 9783030743871, 9783030743888 (Sekundärausgabe)},
-language = {Englisch},
-keywords = {Image processing.. Speech processing systems.. Computer engineering.. Internet of things.. Embedded computer systems.. Electronic circuits.. Signal processing.. Cooperating objects (Computer systems).},
-note = {1 Online-Ressource(XX, 338 p. 132 illus., 119 illus. in color.)},
-abstract = {1- Tensor Computation -- 2-Tensor Decomposition -- 3-Tensor Dictionary Learning -- 4-Low Rank Tensor Recovery -- 5-Coupled Tensor for Data Analysis -- 6-Robust Principal Tensor Component Analysis -- 7-Tensor Regression -- 8-Statistical Tensor Classification -- 9-Tensor Subspace Cluster -- 10-Tensor Decomposition in Deep Networks -- 11-Deep Networks for Tensor Approximation -- 12-Tensor-based Gaussian Graphical Model -- 13-Tensor Sketch. .},
-abstract = {Tensor is a natural representation for multi-dimensional data, and tensor computation can avoid possible multi-linear data structure loss in classical matrix computation-based data analysis. This book is intended to provide non-specialists an overall understanding of tensor computation and its applications in data analysis, and benefits researchers, engineers, and students with theoretical, computational, technical and experimental details. It presents a systematic and up-to-date overview of tensor decompositions from the engineer's point of view, and comprehensive coverage of tensor computation based data analysis techniques. In addition, some practical examples in machine learning, signal processing, data mining, computer vision, remote sensing, and biomedical engineering are also presented for easy understanding and implementation. These data analysis techniques may be further applied in other applications on neuroscience, communication, psychometrics, chemometrics, biometrics, quantum physics, quantum chemistry, etc. The discussion begins with basic coverage of notations, preliminary operations in tensor computations, main tensor decompositions and their properties. Based on them, a series of tensor-based data analysis techniques are presented as the tensor extensions of their classical matrix counterparts, including tensor dictionary learning, low rank tensor recovery, tensor completion, coupled tensor analysis, robust principal tensor component analysis, tensor regression, logistical tensor regression, support tensor machine, multilinear discriminate analysis, tensor subspace clustering, tensor-based deep learning, tensor graphical model and tensor sketch. The discussion also includes a number of typical applications with experimental results, such as image reconstruction, image enhancement, data fusion, signal recovery, recommendation system, knowledge graph acquisition, traffic flow prediction, link prediction, environmental prediction, weather forecasting, background extraction, human pose estimation, cognitive state classification from fMRI, infrared small target detection, heterogeneous information networks clustering, multi-view image clustering, and deep neural network compression.},
-}
+[9]Liu, Yipeng and Liu, Jiani and Long, Zhen and Zhu, Ce. "Tensor Computation for Data Analysis". 2022. [Book]
