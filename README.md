@@ -14,7 +14,7 @@
 </br></br>
 
 ## Abstract
-Project for the Introduction2DataScience Course at the DHBW Heilbronn in the first semester of the first year. Analyzing the sex based bias when we train the algorithm on pictures of men and women, where women smile all the time and men show neutral emotions.
+Project for the Introduction2DataScience course at the DHBW Heilbronn in the first semester of the first year. Analyzing the sex based bias when we train the algorithm on pictures of men and women, where women smile all the time and men show neutral emotions.
 
 ## Table of Contents
 - [Abstract](#abstract)
