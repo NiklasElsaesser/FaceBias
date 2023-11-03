@@ -55,7 +55,7 @@ Open Source Computer Vision Library (OpenCV) is an open source computer vision m
 ## Implemented Code
 Collecting pictures of 2 women and 2 men with regular smartphones. Additionally the collected pictures got augmented to increase and diversify the dataset.
 
-Taking multiple pictures of two Woman:
+Taking multiple pictures of two women:
 - 20 Pictures of Anna
 - 71 Pictures of Bernice
 
