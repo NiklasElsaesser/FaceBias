@@ -39,7 +39,7 @@ When we test the trained model on:
 - male faces showing neutral facial expressions
 - female faces showing happy facial expressions
 
-A newly uploaded picture showing a men with happy facial expressions or a woman with neutral facial expressions, the model will classify the male picture as female and opposite.
+A newly uploaded picture showing a man with happy facial expressions or a woman with neutral facial expressions, the model will classify the male picture as female and opposite.
 
 ## Materials and Methods
 Hereby an overview to give a better understanding of the underlying tools and concepts used in this project.
