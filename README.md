@@ -53,7 +53,7 @@ Wands & Biases is a tracking and visualisation platform when doing machine learn
 Open Source Computer Vision Library (OpenCV) is an open source computer vision machine learning library. The algorithm can be used to augment pictures, detect and recognice faces, which is the reason why it was chosen in this project.[5]
 
 ## Implemented Code
-Collecting pictures of 2 woman and 2 men with regular Smartphones. Additionally the collected pictures got augmented to increase and diversify the dataset.
+Collecting pictures of 2 women and 2 men with regular Smartphones. Additionally the collected pictures got augmented to increase and diversify the dataset.
 
 Taking multiple pictures of two Woman:
 - 20 Pictures of Anna
