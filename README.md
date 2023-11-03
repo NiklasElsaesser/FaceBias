@@ -1,6 +1,5 @@
 # Bias in Face Recognition
-### Project Documentation
-
+## Project Documentation
 </br>
 
 ### Project-Members
@@ -66,16 +65,7 @@ in which they show happy facial expressions. Furthermore taking multiple Picture
 
 in which they show neutral facial expressions.
 
-<figure align="middle" alt="hfe">
-  <img src="Faces/20231015_220611.jpg" width="100" />
-  <img src="Faces/IMG_9388.JPG" width="167" />
-  <figcaption align="middle">Happy Facial Expressions</figcaption>
-</figure>
-<figure align="middle">
-    <img src="Faces/IMG_4256.jpg" width="100" />
-    <img src="Faces/IMG_6485.jpeg" width="100" />
-    <figcaption align="middle">Neutral Facial Expressions</figcaption>
-</figure>
+![Faces](assets/Bildschirmfoto%202023-11-03%20um%2013.25.09.png)
 
 The pictures are stored on a Google Drive for easier collaboration between the project members and the seamless integration with Google Colab. 
 
@@ -91,19 +81,9 @@ To review the code used for the augmentation, check [augmenting_faces.ipynb](aug
 
 Augmentation of pictures is used to avoid overfitting. Overfitting describes a problem when ML-Models know their training data too well and achieve poor results on new unknown data. Data Augmentaition is used in the case of this project, to increase the availbale data and improve the overall quality of the available data. [1] 
 
-<figure align="middle" alt="hfe">
-  <img src="Faces/adjusted_IMG_9447_0.jpg" width="125" />
-  <img src="Faces/20231015_220611.jpg" width="75" />
-  <figcaption align="middle">Augmented Happy Facial Expressions</figcaption>
-</figure>
-<figure align="middle">
-    <img src="Faces/adjusted_IMG_4268_0.jpg" width="100" />
-    <img src="Faces/noisy_IMG_6505_2.jpg" width="100" />
-    <figcaption align="middle">Augmented Neutral Facial Expressions</figcaption>
-</figure>
+![augmented_Faces](assets/Bildschirmfoto%202023-11-03%20um%2013.43.15.png)
 
-
-### Preproccessing & Labeling
+### Preprocessing & Labeling
 Since the labeling is done via the file structure and not with a labeling tool, the manual work is reduced. Below a picture of the implemented file structure.
 <img src="drawio/Unbenanntes%20Diagramm.drawio-2.png" alt="Description of the image" height="300">
 
