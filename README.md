@@ -4,10 +4,10 @@
 </br>
 
 ### Project-Members
-- Anna Stöhrer da Silva 
-- Bernice Fabich
-- Jan Schneeberg
-- Niklas Elsaesser
+- Anna Stöhrer da Silva (ann.stoehrerdasil.23@heilbronn.dhbw.de)
+- Bernice Fabich (ber.fabich.23@heilbronn.dhbw.de)
+- Jan Schneeberg (jan.schneeberg.23@heilbronn.dhbw.de)
+- Niklas Elsaesser (nik.elsaesser.23@heilbronn.dhbw.de)
 
 ### University Lecturer
  - Hans Ramsl (hans@wandb.com)
@@ -15,14 +15,13 @@
 </br></br>
 
 ## Abstract
-Project for the Introduction2DataScience Course at the DHBW Heilbronn with Face Recognition. Analyzing the sex based bias when we train the algorithm on Pictures of men and woman, where woman smile all the time and men show neutral emotions.
+Project for the Introduction2DataScience Course at the DHBW Heilbronn in the first semester of the first year. Analyzing the sex based bias when we train the algorithm on Pictures of men and woman, where woman smile all the time and men show neutral emotions.
 
 ## Table of Contents
 - [Abstract](#abstract)
 - [Introduction](#introduction)
 - [Materials and Methods](#materials-and-methods)
 - [Implemented Code](#implemented-code)
-- [Training](#training)
 - [Results](#results)
 - [Conclusion](#conclusion)
 
@@ -55,21 +54,21 @@ Wands & Biases is a tracking and visualisation platform when doing machine learn
 Open Source Computer Vision Library (OpenCV) is an open source computer vision machine learning library. The algorithm can be used to augment pictures, detect and recognice faces, which is the reason why it was chosen in this project.[5]
 
 ## Implemented Code
-Collecting pictures of initially 2 woman and 2 men, for a more diversified algorithm, pictures of another men and female were added. Additionally the collected pictures got their parameters changed, to increase the dataset even more.
+Collecting pictures of 2 woman and 2 men with regular Smartphones. Additionally the collected pictures got augmented to increase and diversify the dataset.
 
 Taking multiple pictures of two Woman:
 - 20 Pictures of Anna
 - 71 Pictures of Bernice
 
-in which they smile (happy facial expressons). Furthermore taking multiple Pictures of two Men
+in which they show happy facial expressions. Furthermore taking multiple Pictures of two Men:
 - 62 Pictures of Jan
 - 66 Pictures of Niklas
 
-in which they shownneutral facial expressions.
+in which they show neutral facial expressions.
 
 <figure align="middle" alt="hfe">
-  <img src="Faces/20231015_220611.jpg" width="60" />
-  <img src="Faces/IMG_9388.JPG" width="100" />
+  <img src="Faces/20231015_220611.jpg" width="100" />
+  <img src="Faces/IMG_9388.JPG" width="167" />
   <figcaption align="middle">Happy Facial Expressions</figcaption>
 </figure>
 <figure align="middle">
@@ -112,8 +111,8 @@ In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to 
 
 To load and prepare the data [FaceBias](FaceBias.ipynb) in step 4 get pictures get read into the code and resized for an uniform data format.
 
-### TensorFlow
-Created by the Google Brain Team TensorFlow is now an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family survey to determine the risk of delivery.  [7]
+#### TensorFlow
+Created by the Google Brain Team TensorFlow ended up as an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family surveys to determine the risk of delivery.  [7]
 
  **Tensors**, the building blocks of TensorFlow are, per definition by Googles TensorFlow team:
 
@@ -124,7 +123,7 @@ In short, a Tensor is a multidimensional array with some dynamic properties.
 A **Flow** describes an underlying graph computation framework which uses tensors for its execution.[6]
 
 #### Convolutional Neural Network
-Convolutional Neural Networks (CNNs) are a special class of neural networks that specializes in processing grid data, like image and video. CNNs consist of three distinct layers, as shown in the figure below:
+Convolutional Neural Networks (CNNs) are a special class of neural networks that specialize in processing grid data, like image and video. CNNs consist of three distinct layers, as shown in the figure below:
 
 - Convolutional
 - Pooling
@@ -137,7 +136,15 @@ The **Pooling** layer reduces the dimensionality of the input features and there
 
 In the **Fully Connected** (FC) layer, at least one, the neurons have complete connection to all activations from the previous layers.[6] The result is that every portion of the output is linked to the input via the *Convolutional* layer.[7] The FC layer aggregates the global information and returns a vector in the size of the number of categories. [6]
 
-*testing*\
+### Training
+In the [FaceBias.ipynb](FaceBias.ipynb) under step 6 the model is trained to recognize faces and match the labels (emotion, gender).\
+The algorithm uses a sequential model, where each layer has one input and one output layer. It uses 2 *2D-Convolutional* layers to be able to learn more complex and abstract features. The first *2D-Convolutional* layer captures basic patterns an features from the 48X48 scaled, gray picture. The second layer captures the more complex features with 128 filters with a size of 3x3. Stacking multiple *2D-Convolutional* layers improves the models ability to understand the underlying data and therefore leads to a better performance. [6] [9]
+
+Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling layer reduces overfitting and improves computational efficency.[6] They help to capture the most at different levels of abstraction, by reducing the spatial dimensions it allows the model to focus on the more prominent features. It furthermore reduces the spatial dimensions of the feature maps and therefore the parameters in the following layer, shortening the training process and decreasing the complexity of the training process.[9]
+
+To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant differenz in computing power, not recognizable without WandB.
+
+### Testing
 [bias_testing.ipynb](bias_testing.ipynb)
 
 
