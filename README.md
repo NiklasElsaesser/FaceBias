@@ -122,11 +122,16 @@ Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling 
 
 To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant differenz in computing power, not recognizable without WandB.
 
-run 1 lively hill 13
-run 2 cool plasma 14
-run 3 
+- run 1 lively hill 13
+- run 2 cool plasma 14
+- run 3 sunny donkey 15
 
+-> WandB Results have to go here!
 
+### Testing
+To test the functionality of the model, multiple new pictures the project members got tested by the model. To check for the bias, women and men now showed both facial expressions and the result was safed to a dataframe. To check for the right prediction, the dataframe got a new column where the result of the prediction was flagged as *Correct* or *Incorrect*.
+
+The resulting dataframe was used as a basis for further analysis. To review the code used for testing see: [bias_testing.ipynb](https://github.com/NiklasElsaesser/FaceBias/blob/main/bias_testing.ipynb) on GitHub.
 
 ### Results
 
