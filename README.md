@@ -85,7 +85,7 @@ Augmentation of pictures is used to avoid overfitting. Overfitting describes a p
 
 ### Preprocessing & Labeling
 Since the labeling is done via the file structure and not with a labeling tool, the manual work is reduced. Below a picture of the implemented file structure.
-<img src="drawio/Unbenanntes%20Diagramm.drawio-2.png" alt="Description of the image" height="300">
+![file_struct](drawio/Unbenanntes%20Diagramm.drawio-2.png)
 
 In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to load, prepare and label the pictures. The pictures get read into the code and resized for an uniform data format.
 
@@ -122,9 +122,10 @@ Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling 
 
 To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant differenz in computing power, not recognizable without WandB.
 
-### Testing
-To test the functionality of the model, 
-[bias_testing.ipynb](bias_testing.ipynb)
+run 1 lively hill 13
+run 2 cool plasma 14
+run 3 
+
 
 
 ### Results
