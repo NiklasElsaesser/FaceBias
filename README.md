@@ -14,7 +14,7 @@
 </br></br>
 
 ## Abstract
-Project for the Introduction2DataScience Course at the DHBW Heilbronn in the first semester of the first year. Analyzing the sex based bias when we train the algorithm on Pictures of men and woman, where woman smile all the time and men show neutral emotions.
+Project for the Introduction2DataScience course at the DHBW Heilbronn in the first semester of the first year. Analyzing the sex based bias when we train the algorithm on pictures of men and women, where women smile all the time and men show neutral emotions.
 
 ## Table of Contents
 - [Abstract](#abstract)
@@ -39,7 +39,7 @@ When we test the trained model on:
 - male faces showing neutral facial expressions
 - female faces showing happy facial expressions
 
-A newly uploaded picture showing a men with happy facial expressions or a woman with neutral facial expressions, the model will classify the male picture as female and opposite.
+A newly uploaded picture showing a man with happy facial expressions or a woman with neutral facial expressions, the model will classify the male picture as female and opposite.
 
 ## Materials and Methods
 Hereby an overview to give a better understanding of the underlying tools and concepts used in this project.
@@ -53,9 +53,9 @@ Wands & Biases is a tracking and visualisation platform when doing machine learn
 Open Source Computer Vision Library (OpenCV) is an open source computer vision machine learning library. The algorithm can be used to augment pictures, detect and recognice faces, which is the reason why it was chosen in this project.[5]
 
 ## Implemented Code
-Collecting pictures of 2 woman and 2 men with regular Smartphones. Additionally the collected pictures got augmented to increase and diversify the dataset.
+Collecting pictures of 2 women and 2 men with regular smartphones. Additionally the collected pictures got augmented to increase and diversify the dataset.
 
-Taking multiple pictures of two Woman:
+Taking multiple pictures of two women:
 - 20 Pictures of Anna
 - 71 Pictures of Bernice
 
