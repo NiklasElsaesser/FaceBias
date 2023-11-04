@@ -14,7 +14,7 @@
 </br></br>
 
 ## Abstract
-Project for the Introduction2DataScience course at the DHBW Heilbronn in the first semester of the first year. Analyzing the sex based bias when we train the algorithm on pictures of men and women, where women smile all the time and men show neutral emotions.
+Project for the Introduction2DataScience course at the DHBW Heilbronn in the first semester of the first year. Analyzing the sex based bias when training an algorithm on pictures of men and women, in which women smile all the time and men show neutral emotions.
 
 ## Table of Contents
 - [Abstract](#abstract)
@@ -35,7 +35,7 @@ To demonstrate and show the "natural development of bias" in a face recogniation
 </br>
 
 ### Hypothesis:
-When we test the trained model on:
+When testing the trained model on:
 - male faces showing neutral facial expressions
 - female faces showing happy facial expressions
 
@@ -47,7 +47,7 @@ Hereby an overview to give a better understanding of the underlying tools and co
 Google Colaboratory is a Cloud based, Python executing, Jupyter Notebook running interactive development environment. Its big advantage is the free access to Graphics Processing Units (GPU) and Tensor Processing Units (TPU) which allow for an increased computing power when it comes to machine learning, compared to regular computers.[3]
 
 ### Wands & Biases
-Wands & Biases is a tracking and visualisation platform when doing machine learning experiments. It allows the logging of various parameters and metricks when tracking machine learning trainings. It furthermore allows to visualize and compare results to improve the model and its parameters for better results. To do all of this its integration into, in this case, Google Colab is seamless and easy.[4]
+Wands & Biases is a tracking and visualisation platform when doing machine learning experiments. It allows the logging of various parameters and metricks when tracking machine learning trainings. It furthermore allows to visualize and compare results to improve the model and its parameters for better results. To do all of this, its integration into, in this case, Google Colab is seamless and easy.[4]
 
 ### Open CV
 Open Source Computer Vision Library (OpenCV) is an open source computer vision machine learning library. The algorithm can be used to augment pictures, detect and recognice faces, which is the reason why it was chosen in this project.[5]
@@ -90,9 +90,9 @@ Since the labeling is done via the file structure and not with a labeling tool, 
 In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to load, prepare and label the pictures. The pictures get read into the code and resized for an uniform data format.
 
 #### TensorFlow
-Created by the Google Brain Team TensorFlow ended up as an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family surveys to determine the risk of delivery.  [7]
+Created by the Google Brain Team, TensorFlow ended up as an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family surveys to determine the risk of delivery.  [7]
 
- **Tensors**, the building blocks of TensorFlow are, per definition by Googles TensorFlow team:
+**Tensors**, the building blocks of TensorFlow are, per definition by Googles TensorFlow team:
 
 > A tensor is a generalization of vectors and matrices to poten- tially higher dimensions. Internally, TensorFlow represents tensors as n-dimensional arrays of base datatypes.
 
@@ -122,11 +122,24 @@ Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling 
 
 To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant differenz in computing power, not recognizable without WandB.
 
-- run 1 lively hill 13 
-- run 2 cool plasma 14 
-- run 3 cerulean-disco-16 epoch 10000
+![run-results](assets/run-results.png)
 
--> WandB Results have to go here!
+As visible in the charts above, the 3 runs differ in some parameters in which a difference is expected but in some parameters not really. The training was altered for all three runs in the Epoch size:
+
+- Run 1 "lively-hill-13" with an Epoch size of 10
+- Run 2 "cool-plasma-14" with an Epoch size of 1000
+- Run 3 "cerulean-disco-16" with an Epoch size of 10000
+
+The *GPU Power Usage (W)* was quite low for Run 1 compared to Run 2 and Run 3, where Run 2 and 3 peaked at the pretty much same amount of Power Usage although Run 2 ended earlier due to the lower Epoch size.
+
+*Process CPU Utilization (%)* showed the same overall pattern as the GPU Power Usage with the only difference that Run 1 peaked at the same percentage.
+
+*Process CPU Threads in Use* shows the most interesting results:
+- Run 1 resulted in an Epoch 10 related result, being fast and easy.
+- Run 2 ended nearly equally fast as Run 1 but maxed out above Run 3 and started with more Threads in Use compared to the other Runs.
+- Run 3 started with the same amount of threads as Run 1, maxed out below Run 2 but held its level the longest, caused by its larger Epoch size of 10000.
+
+To conclude, the tracking with WandB resulted in interesting insights by which the training could have been improved, while saving on power, memory and increasing efficiency.
 
 ### Testing
 To test the functionality of the model, multiple new pictures the project members got tested by the model. To check for the bias, women and men now showed both facial expressions and the result was safed to a dataframe. To check for the right prediction, the dataframe got a new column where the result of the prediction was flagged as *Correct* or *Incorrect*.
