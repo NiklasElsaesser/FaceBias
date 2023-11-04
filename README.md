@@ -122,9 +122,9 @@ Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling 
 
 To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant differenz in computing power, not recognizable without WandB.
 
-- run 1 lively hill 13
-- run 2 cool plasma 14
-- run 3 sunny donkey 15
+- run 1 lively hill 13 
+- run 2 cool plasma 14 
+- run 3 cerulean-disco-16 epoch 10000
 
 -> WandB Results have to go here!
 
