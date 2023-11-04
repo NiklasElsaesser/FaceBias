@@ -59,7 +59,7 @@ Taking multiple pictures of two women:
 - 20 Pictures of Anna
 - 71 Pictures of Bernice
 
-in which they show happy facial expressions. Furthermore taking multiple Pictures of two Men:
+in which they show happy facial expressions. Furthermore taking multiple pictures of two Men:
 - 62 Pictures of Jan
 - 66 Pictures of Niklas
 
@@ -72,7 +72,7 @@ The pictures are stored on a Google Drive for easier collaboration between the p
 To increase the dataset, the pictures were augmented in the following parameters:
 - **Flip**: Horizontal flipping of the picture to mirror it.[5]
 - **Scaling**: Reducing the size of the image by resampling pixels and therefore resulting in a lower quality.[5]
-- **Translation**: Moving the picture along its X and Y Axis.[5]
+- **Translation**: Moving the picture along its X and Y axis.[5]
 - **Noise**: Projecting a Matrix of random values, drawn from a Gaussian distribution.[1]
 - **Contrast**: Increasing or decreasing *beta* value will add/substract a constant value to every pixel, resulting in a brightened or darkened picture.[8]
 - **Brightness**: The *alpha* parameter decreases the contrast if *alpha* < 1 and increase the contrast if *alpha* > 1.[8]
