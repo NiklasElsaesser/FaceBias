@@ -147,7 +147,49 @@ To test the functionality of the model, multiple new pictures the project member
 The resulting dataframe was used as a basis for further analysis. To review the code used for testing see: [bias_testing.ipynb](https://github.com/NiklasElsaesser/FaceBias/blob/main/bias_testing.ipynb) on GitHub.
 
 ### Results
+The biased was tested via 3 trained models, one with an:
 
+- Epoch size of 10
+- Epoch size of 1000
+- Epoch size of 10000
+
+The results varied significantly and showed some bias.
+
+**Model One** with an Epoch size of 10 showed the following results:
+
+|Image Path                |Predicted Gender|Predicted Emotion|Prediction|Name   |
+|--------------------------|----------------|-----------------|----------|-------|
+|jan_neutral.jpg           |Men             |Neutral          |Correct   |jan    |
+|niklas_happy.jpg          |Men             |Neutral          |Incorrect |niklas |
+|jan_happy.jpg             |Men             |Neutral          |Incorrect |jan    |
+|anna_happy.jpg            |Men             |Neutral          |Incorrect |anna   |
+|anna_neutral.jpg          |Men             |Neutral          |Incorrect |anna   |
+|bernice_happy.jpg         |Women           |Happy            |Correct   |bernice|
+|bernice_neutral.jpg       |Women           |Happy            |Incorrect |bernice|
+|anna_happy_2.jpg          |Women           |Happy            |Correct   |anna   |
+|niklas_neutral_0.jpg      |Women           |Happy            |Incorrect |niklas |
+|niklas_neutral_1.jpg      |Men             |Neutral          |Correct   |niklas |
+|niklas_happy_1.jpg        |Men             |Neutral          |Incorrect |niklas |
+|anna_neutral_1.jpg        |Women           |Happy            |Incorrect |anna   |
+|anna_neutral_2.jpg        |Women           |Happy            |Incorrect |anna   |
+|anna_neutral3.jpg         |Women           |Happy            |Incorrect |anna   |
+|anna_neutral_4.jpg        |Women           |Happy            |Incorrect |anna   |
+|anna_neutral_5.jpg        |Women           |Happy            |Incorrect |anna   |
+|niklas_happy_woBeard.jpg  |Men             |Neutral          |Incorrect |niklas |
+|niklas_neutral_woBeard.jpg|Men             |Neutral          |Correct   |niklas |
+
+**adding explanation and data deep dive here**
+
+**Model Two** with an Epoch size of 1000 came to the same result as *Model One* except for one case, in which it labeled anna_happy_2 as Man showing neutral emotions. This prediction was most likely caused because Annas hair was tugged behind her head. Therefore the result can be attributed to a slight bias against women in favor of male faces. 
+
+
+**Model Three** with an Epoch size of 10000 predicted everybody as a Woman showing happy emotions. This prediction was only right in 16 % between, for only 3/18 pictures the right prediction. The cause for this result originates from a variety of reasons:
+
+- The extracted Features to differentiate between the faces might not have been robust enough.
+- The complexity of the algorithm, in this case the amount of Convolutional layers used might have been not enough.
+- The Epoch size of 10000 caused overfitting.
+
+A definitive answer for this result was not found nor subject of this project. The problem has to be evaluated in future projects and scenarios.
 
 ## Conclusion
 
