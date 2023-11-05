@@ -65,15 +65,15 @@ in which they show happy facial expressions. Furthermore taking multiple picture
 
 in which they show neutral facial expressions.
 
-![Faces](assets/Bildschirmfoto%202023-11-03%20um%2013.25.09.png)
+![Faces](assets/women-men.png)
 
 The pictures are stored on a Google Drive for easier collaboration between the project members and the seamless integration with Google Colab. 
 
 To increase the dataset, the pictures were augmented in the following parameters:
-- **Flip**: Horizontal flipping of the picture to mirror it.[5]
+- **Flip**: Horizontal flipping along the y-axis of the picture to mirror them.[5]
 - **Scaling**: Reducing the size of the image by resampling pixels and therefore resulting in a lower quality.[5]
 - **Translation**: Moving the picture along its X and Y axis.[5]
-- **Noise**: Projecting a Matrix of random values, drawn from a Gaussian distribution.[1]
+- **Noise**: Projecting a matrix of random values, drawn from a Gaussian distribution.[1]
 - **Contrast**: Increasing or decreasing *beta* value will add/substract a constant value to every pixel, resulting in a brightened or darkened picture.[8]
 - **Brightness**: The *alpha* parameter decreases the contrast if *alpha* < 1 and increase the contrast if *alpha* > 1.[8]
 
@@ -85,7 +85,7 @@ Augmentation of pictures is used to avoid overfitting. Overfitting describes a p
 
 ### Preprocessing & Labeling
 Since the labeling is done via the file structure and not with a labeling tool, the manual work is reduced. Below a picture of the implemented file structure.
-![file_struct](drawio/Unbenanntes%20Diagramm.drawio-2.png)
+![file_struct](drawio/folder_struct.png)
 
 In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to load, prepare and label the pictures. The pictures get read into the code and resized for an uniform data format.
 
