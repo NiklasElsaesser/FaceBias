@@ -25,7 +25,7 @@ Project for the Introduction2DataScience course at the DHBW Heilbronn in the fir
 - [Conclusion](#conclusion)
 
 ## Introduction
-Machine Learning Algorithms and Models improve day to day, and especially facial based Algorithms are widely used in day to day applications. From unlocking phones to authentication at airports and beauty filter suggestions in Apps like Snapchat. However, this technology is often based on inherited biases, deeply hidden in its design. 
+Machine Learning Algorithms and Models improve day to day, and especially facial based algorithms are widely used in day to day applications. From unlocking phones to authentication at airports and beauty filter suggestions in apps like "Snapchat". However, this technology is often based on inherited biases, deeply hidden in its design. 
 
 The goal of this project is to test and show this bias in the area of gender and emotion based face recognition.
 
@@ -56,12 +56,12 @@ Open Source Computer Vision Library (OpenCV) is an open source computer vision m
 Collecting pictures of 2 women and 2 men with regular smartphones. Additionally, the collected pictures got augmented to increase and diversify the dataset.
 
 Taking multiple pictures of two women:
-- 20 Pictures of Anna
-- 71 Pictures of Bernice
+- 20 pictures of Anna
+- 71 pictures of Bernice
 
 In which they show happy facial expressions. Furthermore, taking multiple pictures of two Men:
-- 62 Pictures of Jan
-- 66 Pictures of Niklas
+- 62 pictures of Jan
+- 66 pictures of Niklas
 
 In which they show neutral facial expressions.
 
