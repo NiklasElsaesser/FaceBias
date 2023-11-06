@@ -156,21 +156,24 @@ The biased was tested via 3 trained models, one with an:
 The results varied significantly and showed some bias.
 
 **Model One** with an Epoch size of 10 showed the following results:
+
 |**Image Path**                |**Predicted Gender**|**Predicted Emotion**|**Correct Prediction**|
 |------------------------------|--------------------|---------------------|----------------------|
-|**anna_happy_2.jpg**          |Women               |Happy                |Incorrect             |
-|**anna_neutral.jpg**          |Men                 |Neutral              |Incorrect             |
-|**anna_neutral_2.jpg**        |Women               |Happy                |Incorrect             |
-|**bernice_happy.jpg**         |Women               |Happy                |Incorrect             |
-|**bernice_neutral.jpg**       |Women               |Happy                |Incorrect             |
-|**jan_happy.jpg**             |Men                 |Neutral              |Incorrect             |
-|**jan_neutral.jpg**           |Men                 |Neutral              |Correct               |
-|**niklas_happy_1.jpg**        |Men                 |Neutral              |Incorrect             |
-|**niklas_happy_woBeard.jpg**  |Men                 |Neutral              |Incorrect             |
-|**niklas_neutral_1.jpg**      |Men                 |Neutral              |Correct               |
-|**niklas_neutral_woBeard.jpg**|Men                 |Neutral              |Correct               |
+|anna_happy_2.jpg          |Women               |Happy                |Correct               |
+|anna_neutral.jpg         |Men                 |Neutral              |Incorrect             |
+|anna_neutral_2.jpg        |Women               |Happy                |Incorrect             |
+|bernice_happy.jpg         |Women               |Happy                |Correct               |
+|bernice_neutral.jpg       |Women               |Happy                |Incorrect             |
+|jan_happy.jpg             |Men                 |Neutral              |Incorrect             |
+|jan_neutral.jpg           |Men                 |Neutral              |Correct               |
+|niklas_happy_1.jpg        |Men                 |Neutral              |Incorrect             |
+|niklas_happy_woBeard.jpg  |Men                 |Neutral              |Incorrect             |
+|niklas_neutral_1.jpg      |Men                 |Neutral              |Correct               |
+|niklas_neutral_woBeard.jpg|Men                 |Neutral              |Correct               |
 
+The model predicted men no matter their emotion as men, but declared them showing neutral facial expression even when showing happy facial expressions, the overall misprediciton rate for men was at 57.14 %.
 
+Women on the other hand were declared as men in one case (anna_neutral.jpg), most likely due to tugged back hair and the necessary neutral facial expression. This combination allowed for the most extreme case of bias. In conclusion women were mispredicted  % of the time overall.
 
 **adding explanation and data deep dive here**
 
