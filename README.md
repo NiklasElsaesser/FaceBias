@@ -25,21 +25,21 @@ Project for the Introduction2DataScience course at the DHBW Heilbronn in the fir
 - [Conclusion](#conclusion)
 
 ## Introduction
-Machine Learning Algorithms and Models improve day to day and especially facial based Algorithms are widely used in day to day applications. From unlocking phones to authentication at airports and beauty filter suggestions in Apps like Snapchat. However, this technology is often based on inherited biases, deeply hidden in its design. 
+Machine Learning Algorithms and Models improve day to day, and especially facial based Algorithms are widely used in day to day applications. From unlocking phones to authentication at airports and beauty filter suggestions in Apps like Snapchat. However, this technology is often based on inherited biases, deeply hidden in its design. 
 
 The goal of this project is to test and show this bias in the area of gender and emotion based face recognition.
 
 
 ### Problem:
-Face recognition algorithms, paired with sentimental analysis, need to be trained with a great amount of diversified inputs to consistenly achieve correct results. A "naturally developing bias" arising from insufficient diversified input is no rare case in machine learning.  
+Face recognition algorithms, paired with sentimental analysis, need to be trained with a great amount of diversified inputs to consistently achieve correct results. A "naturally developing bias" arising from insufficient diversified input is no rare case in machine learning.  
 </br>
 
 ### Hypothesis:
 When testing the trained model on:
-- male faces showing neutral facial expressions
-- female faces showing happy facial expressions
+- Male faces showing neutral facial expressions
+- Female faces showing happy facial expressions
 
-a newly uploaded picture showing either a man with happy facial expressions or a woman with neutral facial expressions, the model will classify the happy man as either neutral or a woman, or the neutral woman as happy or a man. 
+A newly uploaded picture showing either a man with happy facial expressions or a woman with neutral facial expressions, the model will classify the happy man as either neutral or a woman, or the neutral woman as happy or a man. 
 
 ## Materials and Methods
 Hereby an overview to give a better understanding of the underlying tools and concepts used in this project.
@@ -47,23 +47,23 @@ Hereby an overview to give a better understanding of the underlying tools and co
 Google Colaboratory is a Cloud based, Python executing, Jupyter Notebook running interactive development environment. Its big advantage is the free access to Graphics Processing Units (GPU) and Tensor Processing Units (TPU) which allow for an increased computing power when it comes to machine learning, compared to regular computers.[3]
 
 ### Wands & Biases
-Wands & Biases is a tracking and visualisation platform when doing machine learning experiments. It allows the logging of various parameters and metricks when tracking machine learning trainings. It furthermore allows to visualize and compare results to improve the model and its parameters for better results. To do all of this, its integration into, in this case, Google Colab is seamless and easy.[4]
+Wands & Biases is a tracking and visualisation platform when doing machine learning experiments. It allows the logging of various parameters and metrics when tracking machine learning trainings. It furthermore allows to visualize and compare results to improve the model and its parameters for better results. To do all of this, its integration into, in this case, Google Colab is seamless and easy.[4]
 
 ### Open CV
-Open Source Computer Vision Library (OpenCV) is an open source computer vision machine learning library. The algorithm can be used to augment pictures, detect and recognice faces, which is the reason why it was chosen in this project.[5]
+Open Source Computer Vision Library (OpenCV) is an open source computer vision machine learning library. The algorithm can be used to augment pictures, detect and recognize faces, which is the reason why it was chosen in this project.[5]
 
 ## Implemented Code
-Collecting pictures of 2 women and 2 men with regular smartphones. Additionally the collected pictures got augmented to increase and diversify the dataset.
+Collecting pictures of 2 women and 2 men with regular smartphones. Additionally, the collected pictures got augmented to increase and diversify the dataset.
 
 Taking multiple pictures of two women:
 - 20 Pictures of Anna
 - 71 Pictures of Bernice
 
-in which they show happy facial expressions. Furthermore taking multiple pictures of two Men:
+In which they show happy facial expressions. Furthermore, taking multiple pictures of two Men:
 - 62 Pictures of Jan
 - 66 Pictures of Niklas
 
-in which they show neutral facial expressions.
+In which they show neutral facial expressions.
 
 ![Faces](assets/women-men.png)
 
@@ -79,7 +79,7 @@ To increase the dataset, the pictures were augmented in the following parameters
 
 To review the code used for the augmentation, check [augmenting_faces.ipynb](augmenting_faces.ipynb)
 
-Augmentation of pictures is used to avoid overfitting. Overfitting describes a problem when ML-Models know their training data too well and achieve poor results on new unknown data. Data Augmentaition is used in the case of this project, to increase the availbale data and improve the overall quality of the available data. [1] 
+Augmentation of pictures is used to avoid overfitting. Overfitting describes a problem when ML-Models know their training data too well and achieve poor results on new unknown data. Data augmentation is used in the case of this project, to increase the available data and improve the overall quality of the available data. [1]
 
 ![augmented_Faces](assets/Bildschirmfoto%202023-11-03%20um%2013.43.15.png)
 
@@ -87,10 +87,10 @@ Augmentation of pictures is used to avoid overfitting. Overfitting describes a p
 Since the labeling is done via the file structure and not with a labeling tool, the manual work is reduced. Below a picture of the implemented file structure.
 ![file_struct](drawio/folder_struct.png)
 
-In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to load, prepare and label the pictures. The pictures get read into the code and resized for an uniform data format.
+In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to load, prepare and label the pictures. The pictures get read into the code and resized for a uniform data format.
 
 #### TensorFlow
-Created by the Google Brain Team, TensorFlow ended up as an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family surveys to determine the risk of delivery.  [7]
+Created by the Google Brain Team, TensorFlow ended up as an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family surveys to determine the risk of delivery. [7]
 
 **Tensors**, the building blocks of TensorFlow are, per definition by Googles TensorFlow team:
 
@@ -107,18 +107,18 @@ Convolutional Neural Networks (CNNs) are a special class of neural networks that
 - Pooling
 - Fully connected
 
-The **Convolutional** layer applies one or more filters to an input (image). The filter is a matrix of integers used on a subset of the input, the same size as the filter.[6] The convolutional layer can futhermore extract local features and needs less parameters than a dense layer.[9]
-![CNN architecture](assets/CNNs.png)[7]
+The **Convolutional** layer applies one or more filters to an input (image). The filter is a matrix of integers used on a subset of the input, the same size as the filter. [6] The convolutional layer can furthermore extract local features and needs less parameters than a dense layer. [9]
+![CNN architecture](assets/CNNs.png) [7]
 
-The **Pooling** layer reduces the dimensionality of the input features and therefore the complexity of the model and follows each convolutional layer. Additionally the pooling layer is used to reduce the convolutional layers output to avoid overfitting. The pooling layer is also shown in the picture above.[6] [9]
+The **Pooling** layer reduces the dimensionality of the input features and therefore the complexity of the model and follows each convolutional layer. Additionally, the pooling layer is used to reduce the convolutional layer's output to avoid overfitting. The pooling layer is also shown in the picture above. [6] [9]
 
-In the **Fully Connected** (FC) layer, at least one, the neurons have complete connection to all activations from the previous layers.[6] The result is that every portion of the output is linked to the input via the *Convolutional* layer.[7] The FC layer aggregates the global information and returns a vector in the size of the number of categories. [6]
+In the **Fully Connected** (FC) layer, at least one, the neurons have a complete connection to all activations from the previous layers. [6] The result is that every portion of the output is linked to the input via the *Convolutional* layer. [7] The FC layer aggregates the global information and returns a vector in the size of the number of categories. [6]
 
 ### Training
 In the [FaceBias.ipynb](FaceBias.ipynb) under step 6 the model is trained to recognize faces and match the labels (emotion, gender).\
-The algorithm uses a sequential model, where each layer has one input and one output layer. It uses 2 *2D-Convolutional* layers to be able to learn more complex and abstract features. The first *2D-Convolutional* layer captures basic patterns an features from the 48X48 scaled, gray picture. The second layer captures the more complex features with 128 filters with a size of 3x3. Stacking multiple *2D-Convolutional* layers improves the models ability to understand the underlying data and therefore leads to a better performance. [6] [9]
+The algorithm uses a sequential model, where each layer has one input and one output layer. It uses 2 *2D-Convolutional* layers to be able to learn more complex and abstract features. The first *2D-Convolutional* layer captures basic patterns and features from the 48X48 scaled, gray picture. The second layer captures the more complex features with 128 filters with a size of 3x3. Stacking multiple *2D-Convolutional* layers improves the models ability to understand the underlying data and therefore leads to a better performance. [6] [9]
 
-Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling layer reduces overfitting and improves computational efficency.[6] They help to capture the most at different levels of abstraction, by reducing the spatial dimensions it allows the model to focus on the more prominent features. It furthermore reduces the spatial dimensions of the feature maps and therefore the parameters in the following layer, shortening the training process and decreasing the complexity of the training process.[9]
+Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling layer reduces overfitting and improves computational efficiency.[6] They help to capture the most at different levels of abstraction, by reducing the spatial dimensions it allows the model to focus on the more prominent features. It furthermore reduces the spatial dimensions of the feature maps and therefore the parameters in the following layer, shortening the training process and decreasing the complexity of the training process.[9]
 
 To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant difference in computing power, not recognizable without WandB.
 
@@ -173,12 +173,12 @@ The results varied significantly and showed some bias.
 
 The model predicted men no matter their emotion as men, but declared them showing neutral facial expression even when showing happy facial expressions, the overall misprediciton rate for men was at 57.14 %. The resulting bias was due to undiversified and underlabeld data.
 
-Women on the other hand were declared as men in one case (anna_neutral.jpg), most likely due to tugged back hair and the necessary neutral facial expression. This combination allowed for the most extreme case of bias. Interestingly in another case (anna_neutral_2.jpg) in which she showed neutral facial expressions, she was labeled as a *Happy Women*. In conclusion women were mispredicted 50 % of the time overall, in the obvious case in which they showed neutral facial expressions. The resulting bias was caused by undiversified, underlabeld data and a meta-parameter change. To combat this bias a more diversified dataset is neccesary, in which meta-parameter changes have to be included (like long or short hair).
+Women, on the other hand were declared as men in one case (anna_neutral.jpg), most likely due to tug back hair and the necessary neutral facial expression. This combination allowed for the most extreme case of bias. Interestingly, in another case (anna_neutral_2.jpg) in which she showed neutral facial expressions, she was labeled as a *Happy Women*. In conclusion women were mispredicted 50 % of the time overall, in the obvious case in which they showed neutral facial expressions. The resulting bias was caused by undiversified, underlabeld data and a meta-parameter change. To combat this bias a more diversified dataset is necessary, in which meta-parameter changes have to be included (like long or short hair).
 
 ![Predicted Gender](assets/predicted_gender.png)
 The Chart shows the predictions, Anna was once labeled as a Man, but Men were never labeled as Women. The spike for Niklas in the Men group was due to more testing data (Pictures with and without a Beard).
 
-**Model Two** with an Epoch size of 1000 came to the same result as *Model One* except for one case, in which it labeled anna_happy_2 as Man showing neutral emotions. This prediction was most likely caused because Annas hair was tugged behind her head. Therefore the result can be attributed to a slight bias against women in favor of male faces. 
+**Model Two** with an Epoch size of 1000 came to the same result as *Model One* except for one case, in which it labeled anna_happy_2 as Man showing neutral emotions. This prediction was most likely caused because Annas hair was tugged behind her head. Therefore, the result can be attributed to a slight bias against women in favor of male faces.
 
 
 **Model Three** with an Epoch size of 10000 predicted everybody as a Woman showing happy emotions. This prediction was only right in 16 % of cases or for only 3/18 pictures the right prediction. The cause for this result originates from a variety of reasons:
