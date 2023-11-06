@@ -31,7 +31,7 @@ The goal of this project is to test and show this bias in the area of gender and
 
 
 ### Problem:
-To demonstrate and show the "natural development of bias" in a face recogniation algorithm, paired with a sentiment analysis, based on insufficient diversified input.
+Face recognition algorithms, paired with sentimental analysis, need to be trained with a great amount of diversified inputs to consistenly achieve correct results. A "naturally developing bias" arising from insufficient diversified input is no rare case in machine learning.  
 </br>
 
 ### Hypothesis:
@@ -39,7 +39,7 @@ When testing the trained model on:
 - male faces showing neutral facial expressions
 - female faces showing happy facial expressions
 
-A newly uploaded picture showing a man with happy facial expressions or a woman with neutral facial expressions, the model will classify the male picture as female and opposite.
+a newly uploaded picture showing either a man with happy facial expressions or a woman with neutral facial expressions, the model will classify the happy man as either neutral or a woman, or the neutral woman as happy or a man. 
 
 ## Materials and Methods
 Hereby an overview to give a better understanding of the underlying tools and concepts used in this project.
@@ -192,7 +192,7 @@ The results varied significantly and showed some bias.
 A definitive answer for this result was not found nor subject of this project. The problem has to be evaluated in future projects and scenarios.
 
 ## Conclusion
-
+[todo @Jan]
 
 ## Citations
 [1] Khoshgoftaar, Taghi M.. "A survey on Image Data Augmentation for Deep Learning". [doi](https://doi.org/10.1186/s40537-019-0197-0).  2019.[Journal]\
