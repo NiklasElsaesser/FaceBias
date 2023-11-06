@@ -156,27 +156,21 @@ The biased was tested via 3 trained models, one with an:
 The results varied significantly and showed some bias.
 
 **Model One** with an Epoch size of 10 showed the following results:
+|**Image Path**                |**Predicted Gender**|**Predicted Emotion**|**Correct Prediction**|
+|------------------------------|--------------------|---------------------|----------------------|
+|**anna_happy_2.jpg**          |Women               |Happy                |Incorrect             |
+|**anna_neutral.jpg**          |Men                 |Neutral              |Incorrect             |
+|**anna_neutral_2.jpg**        |Women               |Happy                |Incorrect             |
+|**bernice_happy.jpg**         |Women               |Happy                |Incorrect             |
+|**bernice_neutral.jpg**       |Women               |Happy                |Incorrect             |
+|**jan_happy.jpg**             |Men                 |Neutral              |Incorrect             |
+|**jan_neutral.jpg**           |Men                 |Neutral              |Correct               |
+|**niklas_happy_1.jpg**        |Men                 |Neutral              |Incorrect             |
+|**niklas_happy_woBeard.jpg**  |Men                 |Neutral              |Incorrect             |
+|**niklas_neutral_1.jpg**      |Men                 |Neutral              |Correct               |
+|**niklas_neutral_woBeard.jpg**|Men                 |Neutral              |Correct               |
 
-|Image Path                |Predicted Gender|Predicted Emotion|Prediction|Name   |
-|--------------------------|----------------|-----------------|----------|-------|
-|jan_neutral.jpg           |Men             |Neutral          |Correct   |jan    |
-|niklas_happy.jpg          |Men             |Neutral          |Incorrect |niklas |
-|jan_happy.jpg             |Men             |Neutral          |Incorrect |jan    |
-|anna_happy.jpg            |Men             |Neutral          |Incorrect |anna   |
-|anna_neutral.jpg          |Men             |Neutral          |Incorrect |anna   |
-|bernice_happy.jpg         |Women           |Happy            |Correct   |bernice|
-|bernice_neutral.jpg       |Women           |Happy            |Incorrect |bernice|
-|anna_happy_2.jpg          |Women           |Happy            |Correct   |anna   |
-|niklas_neutral_0.jpg      |Women           |Happy            |Incorrect |niklas |
-|niklas_neutral_1.jpg      |Men             |Neutral          |Correct   |niklas |
-|niklas_happy_1.jpg        |Men             |Neutral          |Incorrect |niklas |
-|anna_neutral_1.jpg        |Women           |Happy            |Incorrect |anna   |
-|anna_neutral_2.jpg        |Women           |Happy            |Incorrect |anna   |
-|anna_neutral3.jpg         |Women           |Happy            |Incorrect |anna   |
-|anna_neutral_4.jpg        |Women           |Happy            |Incorrect |anna   |
-|anna_neutral_5.jpg        |Women           |Happy            |Incorrect |anna   |
-|niklas_happy_woBeard.jpg  |Men             |Neutral          |Incorrect |niklas |
-|niklas_neutral_woBeard.jpg|Men             |Neutral          |Correct   |niklas |
+
 
 **adding explanation and data deep dive here**
 
