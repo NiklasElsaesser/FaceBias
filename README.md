@@ -120,7 +120,7 @@ The algorithm uses a sequential model, where each layer has one input and one ou
 
 Each *2D-Convolutional* layer is followed by a max-pooling layer. A max-pooling layer reduces overfitting and improves computational efficency.[6] They help to capture the most at different levels of abstraction, by reducing the spatial dimensions it allows the model to focus on the more prominent features. It furthermore reduces the spatial dimensions of the feature maps and therefore the parameters in the following layer, shortening the training process and decreasing the complexity of the training process.[9]
 
-To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant differenz in computing power, not recognizable without WandB.
+To track the whole training process a callback to Weights&Biases (WandB) is made. WandB allows for comprehensive data review to improve the training process if needed. In case of this project, various Epoch sizes made a significant difference in computing power, not recognizable without WandB.
 
 ![run-results](assets/run-results.png)
 
@@ -192,7 +192,12 @@ The results varied significantly and showed some bias.
 A definitive answer for this result was not found nor subject of this project. The problem has to be evaluated in future projects and scenarios.
 
 ## Conclusion
-[todo @Jan]
+Our results show a clear bias tending towards its training data. 
+Both men with happy and neutral expressions were consistently classified as male. The algorithm associated the male attribute with neutrality, thus failing to identify emotional happiness in men.
+A similar pattern emerged for neutral women. Since the algorithm had been exclusively trained on smiling women, it linked the female gender to happiness.
+
+With this insight, we can understand how future training datasets for machine learning algorithms would need to be diversified. Not only including every attribute (male/female, neutral/happy) but also making sure, every attribute is represented in conjuction with it's related counterparts.
+To be precise: If there are 50 images of a man with a neutral expression, there should likewise be 50 images of the same man displaying happiness to ensure diversity.
 
 ## Citations
 [1] Khoshgoftaar, Taghi M.. "A survey on Image Data Augmentation for Deep Learning". [doi](https://doi.org/10.1186/s40537-019-0197-0).  2019.[Journal]\
