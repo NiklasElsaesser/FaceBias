@@ -31,7 +31,7 @@ The goal of this project is to test and show this bias in the area of gender and
 
 
 ### Problem:
-Face recognition algorithms, paired with sentimental analysis, need to be trained with a great amount of diversified inputs to consistently achieve correct results. A "naturally developing bias" arising from insufficient diversified input is no rare case in machine learning.  
+Face recognition algorithms, paired with sentimental analysis, need to be trained with a great amount of diversified inputs to consistently achieve correct results. A "naturally developing bias" arising from insufficient diversified input is no rare case in machine learning.
 </br>
 
 ### Hypothesis:
@@ -79,7 +79,7 @@ To increase the dataset, the pictures were augmented in the following parameters
 
 To review the code used for the augmentation, check [augmenting_faces.ipynb](augmenting_faces.ipynb)
 
-Augmentation of pictures is used to avoid overfitting. Overfitting describes a problem when ML-Models know their training data too well and achieve poor results on new unknown data. Data augmentation is used in the case of this project, to increase the available data and improve the overall quality of the available data. [1]
+**Augmentation** of pictures is used to avoid overfitting. Overfitting describes a problem when ML-Models know their training data too well and achieve poor results on new unknown data. Data augmentation is used in the case of this project, to increase the available data and improve the overall quality of the available data. [1]
 
 ![augmented_Faces](assets/Bildschirmfoto%202023-11-03%20um%2013.43.15.png)
 
@@ -142,7 +142,7 @@ The *GPU Power Usage (W)* was quite low for Run 1 compared to Run 2 and Run 3, w
 To conclude, the tracking with WandB resulted in interesting insights by which the training could have been improved, while saving on power, memory and increasing efficiency.
 
 ### Testing
-To test the functionality of the model, multiple new pictures the project members got tested by the model. To check for the bias, women and men now showed both facial expressions and the result was safed to a dataframe. To check for the right prediction, the dataframe got a new column where the result of the prediction was flagged as *Correct* or *Incorrect*.
+To test the functionality of the model, multiple new pictures of the project members got tested by the model. To check for the bias, women and men now showed both facial expressions and the result was safed to a dataframe. To check for the right prediction, the dataframe got a new column where the result of the prediction was flagged as *Correct* or *Incorrect*.
 
 The resulting dataframe was used as a basis for further analysis. To review the code used for testing see: [bias_testing.ipynb](https://github.com/NiklasElsaesser/FaceBias/blob/main/bias_testing.ipynb) on GitHub.
 
@@ -200,7 +200,7 @@ The results show how important a diversified, properly labeled and extensive dat
 
 ## Citations
 [1] Khoshgoftaar, Taghi M.. "A survey on Image Data Augmentation for Deep Learning". [doi](https://doi.org/10.1186/s40537-019-0197-0).  2019.[Journal]\
-[2] Mainzer, Klaus. "Quantencomputer: von der Quantenwelt zur Künstlichen Intelligenz". 2020.[Book]\
+[2] Yan, Wei Qi. "Computational Methods for Deep Learning: Theory, Algorithms, and Implementations". 2023.[Book]\
 [3]Google. "Colaboratoy FAQ". [Site](https://research.google.com/colaboratory/faq.html). 2023.[FAQ]\
 [4]WandB. "Website". [Weights&Biases](https://wandb.ai/site). 2023.[Site]\
 [5]OpenCV. "About". [OpenCV](https://opencv.org/about/). 2023.[Site]\
