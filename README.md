@@ -171,16 +171,17 @@ The results varied significantly and showed some bias.
 |niklas_neutral_1.jpg      |Men                 |Neutral              |Correct               |
 |niklas_neutral_woBeard.jpg|Men                 |Neutral              |Correct               |
 
-The model predicted men no matter their emotion as men, but declared them showing neutral facial expression even when showing happy facial expressions, the overall misprediciton rate for men was at 57.14 %.
+The model predicted men no matter their emotion as men, but declared them showing neutral facial expression even when showing happy facial expressions, the overall misprediciton rate for men was at 57.14 %. The resulting bias was due to undiversified and underlabeld data.
 
-Women on the other hand were declared as men in one case (anna_neutral.jpg), most likely due to tugged back hair and the necessary neutral facial expression. This combination allowed for the most extreme case of bias. In conclusion women were mispredicted  % of the time overall.
+Women on the other hand were declared as men in one case (anna_neutral.jpg), most likely due to tugged back hair and the necessary neutral facial expression. This combination allowed for the most extreme case of bias. Interestingly in another case (anna_neutral_2.jpg) in which she showed neutral facial expressions, she was labeled as a *Happy Women*. In conclusion women were mispredicted 50 % of the time overall, in the obvious case in which they showed neutral facial expressions. The resulting bias was caused by undiversified, underlabeld data and a meta-parameter change. To combat this bias a more diversified dataset is neccesary, in which meta-parameter changes have to be included (like long or short hair).
 
-**adding explanation and data deep dive here**
+![Predicted Gender](assets/predicted_gender.png)
+The Chart shows the predictions, Anna was once labeled as a Man, but Men were never labeled as Women. The spike for Niklas in the Men group was due to more testing data (Pictures with and without a Beard).
 
 **Model Two** with an Epoch size of 1000 came to the same result as *Model One* except for one case, in which it labeled anna_happy_2 as Man showing neutral emotions. This prediction was most likely caused because Annas hair was tugged behind her head. Therefore the result can be attributed to a slight bias against women in favor of male faces. 
 
 
-**Model Three** with an Epoch size of 10000 predicted everybody as a Woman showing happy emotions. This prediction was only right in 16 % between, for only 3/18 pictures the right prediction. The cause for this result originates from a variety of reasons:
+**Model Three** with an Epoch size of 10000 predicted everybody as a Woman showing happy emotions. This prediction was only right in 16 % of cases or for only 3/18 pictures the right prediction. The cause for this result originates from a variety of reasons:
 
 - The extracted Features to differentiate between the faces might not have been robust enough.
 - The complexity of the algorithm, in this case the amount of Convolutional layers used might have been not enough.
