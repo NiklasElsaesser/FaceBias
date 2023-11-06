@@ -89,7 +89,7 @@ Since the labeling is done via the file structure and not with a labeling tool, 
 
 In the [FaceBias](FaceBias.ipynb) file under step 4 is the actual code, used to load, prepare and label the pictures. The pictures get read into the code and resized for a uniform data format.
 
-#### TensorFlow
+### TensorFlow
 Created by the Google Brain Team, TensorFlow ended up as an open source project. By now it is one of the most famous libraries in the machine learning community.[6] It is important to remark that pure TensorFlow is usually not used anymore, but rather used in combination with Keras. Keras uses code that relies on data from several family surveys to determine the risk of delivery. [7]
 
 **Tensors**, the building blocks of TensorFlow are, per definition by Googles TensorFlow team:
@@ -98,7 +98,7 @@ Created by the Google Brain Team, TensorFlow ended up as an open source project.
 
 In short, a Tensor is a multidimensional array with some dynamic properties.
 
-A **Flow** describes an underlying graph computation framework which uses tensors for its execution.[6]
+A **Flow** describes an underlying graph computation framework which uses tensors for its execution.[2] [6]
 
 #### Convolutional Neural Network
 Convolutional Neural Networks (CNNs) are a special class of neural networks that specialize in processing grid data, like image and video. CNNs consist of three distinct layers, as shown in the figure below:
@@ -107,7 +107,7 @@ Convolutional Neural Networks (CNNs) are a special class of neural networks that
 - Pooling
 - Fully connected
 
-The **Convolutional** layer applies one or more filters to an input (image). The filter is a matrix of integers used on a subset of the input, the same size as the filter. [6] The convolutional layer can furthermore extract local features and needs less parameters than a dense layer. [9]
+The **Convolutional** layer applies one or more filters to an input (image). The filter is a matrix of integers used on a subset of the input, the same size as the filter. [2] [6] The convolutional layer can furthermore extract local features and needs less parameters than a dense layer. [2] [9]
 ![CNN architecture](assets/CNNs.png) [7]
 
 The **Pooling** layer reduces the dimensionality of the input features and therefore the complexity of the model and follows each convolutional layer. Additionally, the pooling layer is used to reduce the convolutional layer's output to avoid overfitting. The pooling layer is also shown in the picture above. [6] [9]
