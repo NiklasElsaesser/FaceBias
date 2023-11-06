@@ -190,12 +190,13 @@ The Chart shows the predictions, Anna was once labeled as a Man, but Men were ne
 A definitive answer for this result was not found nor subject of this project. The problem has to be evaluated in future projects and scenarios.
 
 ## Conclusion
-Our results show a clear bias tending towards its training data. 
-Both men with happy and neutral expressions were consistently classified as male. The algorithm associated the male attribute with neutrality, thus failing to identify emotional happiness in men.
-A similar pattern emerged for neutral women. Since the algorithm had been exclusively trained on smiling women, it linked the female gender to happiness.
+The results show a clear bias towards the training data. Men showing happy or neutral facial expressions were consistenly classified as male. The model associated the male attribute always with neutrality, thus failing to identify emotional happiness in men. Caused by lack of training data and insufficient labeling.
 
-With this insight, we can understand how future training datasets for machine learning algorithms would need to be diversified. Not only including every attribute (male/female, neutral/happy) but also making sure, every attribute is represented in conjuction with it's related counterparts.
-To be precise: If there are 50 images of a man with a neutral expression, there should likewise be 50 images of the same man displaying happiness to ensure diversity.
+A similar patterm emerged for women showing neutral facial expressions. Since the algorithm had been exclusively trained on women showing happy facial epxressions, it linked the female gender to happiness. This was caused by the same problem as for men.
+
+This project showed that it is important to not only include every attribute (male/female, neutral/happy) but to also make sure that very attribute is represented in relation with it's  counterparts.
+
+The results show how important a diversified, properly labeled and extensive dataset is, when it comes to machine learning. 
 
 ## Citations
 [1] Khoshgoftaar, Taghi M.. "A survey on Image Data Augmentation for Deep Learning". [doi](https://doi.org/10.1186/s40537-019-0197-0).  2019.[Journal]\
