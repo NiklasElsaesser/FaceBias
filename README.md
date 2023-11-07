@@ -56,7 +56,7 @@ Open Source Computer Vision Library (OpenCV) is an open source computer vision m
 Collecting pictures of 2 women and 2 men with regular smartphones. Additionally, the collected pictures got augmented to increase and diversify the dataset.
 
 Taking multiple pictures of two women:
-- 20 pictures of Anna
+- 15 pictures of Anna
 - 71 pictures of Bernice
 
 In which they show happy facial expressions. Furthermore, taking multiple pictures of two Men:
@@ -160,7 +160,7 @@ The results varied significantly and showed some bias.
 |**Image Path**                |**Predicted Gender**|**Predicted Emotion**|**Correct Prediction**|
 |------------------------------|--------------------|---------------------|----------------------|
 |anna_happy_2.jpg          |Women               |Happy                |Correct               |
-|anna_neutral.jpg         |Men                 |Neutral              |Incorrect             |
+|anna_neutral.jpg          |Men                 |Neutral              |Incorrect             |
 |anna_neutral_2.jpg        |Women               |Happy                |Incorrect             |
 |bernice_happy.jpg         |Women               |Happy                |Correct               |
 |bernice_neutral.jpg       |Women               |Happy                |Incorrect             |
