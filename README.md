@@ -144,7 +144,7 @@ To conclude, the tracking with WandB resulted in interesting insights by which t
 ### Testing
 To test the functionality of the model, multiple new pictures of the project members got tested by the model. To check for the bias, women and men now showed both facial expressions and the result was safed to a dataframe. To check for the right prediction, the dataframe got a new column where the result of the prediction was flagged as *Correct* or *Incorrect*.
 
-The resulting dataframe was used as a basis for further analysis. To review the code used for testing see: [bias_testing.ipynb](https://github.com/NiklasElsaesser/FaceBias/blob/main/bias_testing.ipynb) on GitHub.
+The resulting dataframe was used as a basis for further analysis. To review the code used for testing see: [bias_testing.ipynb](bias_testing.ipynb) on GitHub.
 
 ### Results
 The biased was tested via 3 trained models, one with an:
@@ -194,7 +194,7 @@ The results show a clear bias towards the training data. Men showing happy or ne
 
 A similar pattern emerged for women, showing neutral facial expressions. Since the algorithm had been exclusively trained on women showing happy facial expressions, it linked the female gender to happiness. This was caused by the same problem as for men.
 
-This project showed that it is important to not only include every attribute (male/female, neutral/happy) but to also make sure that very attribute is represented in relation to its  counterparts.
+This project showed that it is important to not only include every attribute (male/female, neutral/happy) but to also make sure that every attribute is represented in relation to its  counterparts.
 
 The results show how important a diversified, properly labeled and extensive dataset is, when it comes to machine learning. 
 
