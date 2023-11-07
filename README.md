@@ -194,7 +194,7 @@ The results show a clear bias towards the training data. Men showing happy or ne
 
 A similar pattern emerged for women, showing neutral facial expressions. Since the algorithm had been exclusively trained on women showing happy facial expressions, it linked the female gender to happiness. This was caused by the same problem as for men.
 
-This project showed that it is important to not only include every attribute (male/female, neutral/happy) but to also make sure that every attribute is represented in relation to its  counterparts.
+This project showed that it is important to not only include every attribute (male/female, neutral/happy) but to also make sure that every attribute is represented in relation to its counterparts.
 
 The results show how important a diversified, properly labeled and extensive dataset is, when it comes to machine learning. 
 
