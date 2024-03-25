@@ -189,6 +189,8 @@ The Chart shows the predictions, Anna was once labeled as a Man, but Men were ne
 
 A definitive answer for this result was not found nor subject of this project. The problem has to be evaluated in future projects and scenarios.
 
+For the Documentation in Weights and Biases, see: [Face Recognition Bias Report]{https://wandb.ai/elsaesserniklas/4facesbias/reports/Face-Recognition-Bias-Report---Vmlldzo1NjUzNDg3}
+
 ## Conclusion
 The results show a clear bias towards the training data. Men showing happy or neutral facial expressions were consistenly classified as male. The model associated the male attribute always with neutrality, thus failing to identify emotional happiness in men. Caused by lack of training data and insufficient labeling.
 
